@@ -47,5 +47,8 @@ Depending on training iterations (**Epochs**) and load parameters ($q$), the neu
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/gopals09920/pinn_structural_integrity.git](https://github.com/gopals09920/pinn_structural_integrity.git)
+   git clone [https://github.com/gopals09920/pinn_structural_integrity.git]
    cd PINN_Structural_Integrity
+
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://pinnstructuralintegrity-wqrhjw4nzkjvcj6zjxmix8.streamlit.app)
