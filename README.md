@@ -27,19 +27,19 @@ Pinned-pinned boundary conditions at both ends of the beam:
 
 ## 📊 Model Training & Convergence Analysis
 
-Depending on training iterations (**Epochs**), the neural network learns the physical laws progressively:
+Depending on training iterations (**Epochs**) and load parameters ($q$), the neural network learns the physical laws progressively:
 
-| Fully Converged / Accurate (Epochs = 3000, q = 1.0) | Under-Trained / Initial Split (Epochs = 500, q = 5.0) |
+| Fully Converged / Accurate (Epochs = 3000, q = 1.0) | Under-Trained / Visible Split (Epochs = 2100, q = 4.0) |
 | :---: | :---: |
 | ![Converged PINN](Assets/converged_pinn.png) | ![Split PINN](Assets/split_pinn.png) |
-| *PINN prediction overlaps perfectly with the exact analytical solution.* | *Visible divergence/gap showing the model learning physics mid-training.* |
+| *MSE Error: 0.000000 \| L2 Relative: 0.0175%* | *MSE Error: 0.004044 \| L2 Relative: 17.4600%* |
 
 ---
 
 ## 🚀 Key Features
 - **Physics-Informed Loss Function:** Combines physics residual loss ($d^2u/dx^2 = -q$) with boundary condition loss using PyTorch automatic differentiation (`autograd`).
 - **Interactive Streamlit Dashboard:** Real-time parameter tuning for loads ($q$) and training epochs.
-- **Quantitative Performance Metrics:** Live computation of **MSE Error**, **Max Absolute Error**, and **L2 Relative Error percentage**.
+- **Quantitative Performance Metrics:** Live computation of **MSE Error**, **Max Error**, and **L2 Relative Error percentage**.
 
 ---
 
@@ -47,5 +47,5 @@ Depending on training iterations (**Epochs**), the neural network learns the phy
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/APKA_USERNAME/pinn-structural-integrity.git](https://github.com/APKA_USERNAME/pinn-structural-integrity.git)
+   git clone [https://github.com/gopals09920/pinn_structural_integrity.git](https://github.com/gopals09920/pinn_structural_integrity.git)
    cd PINN_Structural_Integrity
